@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import AppFrame from './../components/AppFrame';
 import CustomersActions from './../components/CustomersActions';
 import { withRouter } from 'react-router-dom';
-import PropTypes from 'prop-types';
 
 class HomeContainer extends Component {
 
@@ -28,9 +27,5 @@ class HomeContainer extends Component {
         );
     }
 }
-
-HomeContainer.propTypes = {
-
-};
 
 export default withRouter( HomeContainer );

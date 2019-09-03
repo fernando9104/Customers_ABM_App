@@ -7,8 +7,8 @@ const AppFrame = ({ header, body }) => {
         <div>
             <div className="app-frame">
                 <AppHeader title={ header }></AppHeader>
-                <di>{body}</di>
-                <di>Aplicacion Simple de Ejemplo</di>
+                <div>{body}</div>
+                <div>Aplicacion Simple de Ejemplo</div>
             </div>
         </div>
     );
