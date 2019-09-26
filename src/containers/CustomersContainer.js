@@ -8,7 +8,7 @@ import CustomersActions from '../components/CustomersActions';
 import { fetchCustomers } from '../actions/fetchCustomers';
 import { getCustomers } from '../selectors/customers';
 
-class CustomerContainer extends Component {
+class CustomersContainer extends Component {
 
     componentDidMount() {
         this.props.fetchCustomers();
@@ -39,12 +39,12 @@ class CustomerContainer extends Component {
     }
 }
 
-CustomerContainer.propTypes = {
+CustomersContainer.propTypes = {
     fetchCustomers: PropTypes.func.isRequired,
     customers: PropTypes.array.isRequired
 };
 
-CustomerContainer.defaultProps = {
+CustomersContainer.defaultProps = {
     customers:[]
 }
 
@@ -52,4 +52,4 @@ const mapStateToProps = state => ({
     customers: getCustomers(state)
 });
 
-export default withRouter(connect( mapStateToProps, {fetchCustomers:fetchCustomers} )(CustomerContainer));     
+export default withRouter(connect( mapStateToProps, {fetchCustomers:fetchCustomers} )(CustomersContainer));     
